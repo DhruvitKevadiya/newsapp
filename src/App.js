@@ -15,7 +15,7 @@ import LoadingBar from 'react-top-loading-bar'
 
 export default class App extends Component {
   pageSize = 20;
-  apiKey="9a39d35d212a4f699fd5941567e3d6a3";
+  apiKey = process.env.REACT_APP_NEWS_API;
 
 
   state = {
@@ -31,6 +31,7 @@ export default class App extends Component {
         <Router>
         <Navbar/>
         <LoadingBar
+        height={3}
         color='#f11946'
         progress={this.state.progress}
         // onLoaderFinished={() => setProgress(0)}
